@@ -1,0 +1,36 @@
+{
+  "name": "license-tool",
+  "version": "0.0.1",
+  "description": "A tool to validate license header, or modify license of target file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackjia-ibm/license-tool.git"
+  },
+  "author": "Jack T. Jia <jack-tiefeng.jia@ibm.com>",
+  "license": "EPL-2.0",
+  "bugs": {
+    "url": "https://github.com/jackjia-ibm/license-tool/issues"
+  },
+  "homepage": "https://github.com/jackjia-ibm/license-tool#readme",
+  "engines": {
+    "node": ">=8.0"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "license-tool": "cli.js"
+  },
+  "dependencies": {
+    "glob": "^7.1.2",
+    "shebang-regex": "^2.0.0",
+    "winston": "^3.0.0",
+    "yargs": "^12.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0"
+  }
+}

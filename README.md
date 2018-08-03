@@ -1,2 +1,3 @@
 # license-tool
-Validate license header, or modify license
+
+A tool to validate license header, or modify license of target file.
