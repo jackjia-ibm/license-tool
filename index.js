@@ -6,7 +6,7 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
-const { checkStandaloneLicense } = require('./lib/common');
+const { checkStandaloneLicense } = require('./lib/check-standalone');
 
 module.exports = {
   checkStandaloneLicense,

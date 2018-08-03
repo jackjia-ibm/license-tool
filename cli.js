@@ -12,7 +12,8 @@
 const pkg = require('./package.json');
 const version = pkg && pkg.version;
 // load other functions
-const { P, checkStandaloneLicense } = require('./lib/common');
+const { P } = require('./lib/common');
+const { checkStandaloneLicense } = require('./lib/check-standalone');
 
 // parse arguments
 const yargs = require('yargs');
