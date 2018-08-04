@@ -9,6 +9,10 @@ npm install
 npm link
 ```
 
+## Configure License Files
+
+Update the files located in `licenses` folder.
+
 ## Usage
 
 ```

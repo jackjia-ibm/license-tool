@@ -12,6 +12,7 @@
 const pkg = require('./package.json');
 const version = pkg && pkg.version;
 // load other functions
+const path = require('path');
 const { P } = require('./lib/common');
 const { checkStandaloneLicense } = require('./lib/check-standalone');
 const { checkHeaderLicense } = require('./lib/check-header');
@@ -74,7 +75,7 @@ P()
       logger.debug('skipped standalone license check.');
     }
 
-    await checkStandaloneLicense(logger, folder, argv.standalone, argv.fix);
+    await checkStandaloneLicense(logger, folder, path.join(__dirname, argv.standalone), argv.fix);
     logger.info('');
   })
   .then(async() => {
@@ -82,7 +83,7 @@ P()
       logger.debug('skipped header license check.');
     }
 
-    await checkHeaderLicense(logger, folder, argv.header, argv.fix);
+    await checkHeaderLicense(logger, folder, path.join(__dirname, argv.header), argv.fix);
     logger.info('');
   })
   .then(() => {
