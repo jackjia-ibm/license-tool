@@ -7,7 +7,9 @@
  */
 
 const { checkStandaloneLicense } = require('./lib/check-standalone');
+const { checkHeaderLicense } = require('./lib/check-header');
 
 module.exports = {
   checkStandaloneLicense,
+  checkHeaderLicense,
 };

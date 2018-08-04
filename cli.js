@@ -14,6 +14,7 @@ const version = pkg && pkg.version;
 // load other functions
 const { P } = require('./lib/common');
 const { checkStandaloneLicense } = require('./lib/check-standalone');
+const { checkHeaderLicense } = require('./lib/check-header');
 
 // parse arguments
 const yargs = require('yargs');
@@ -74,6 +75,14 @@ P()
     }
 
     await checkStandaloneLicense(logger, folder, argv.standalone, argv.fix);
+    logger.info('');
+  })
+  .then(async() => {
+    if (!argv.header) {
+      logger.debug('skipped header license check.');
+    }
+
+    await checkHeaderLicense(logger, folder, argv.header, argv.fix);
     logger.info('');
   })
   .then(() => {
