@@ -4,14 +4,28 @@ A tool to validate license header, or modify license of target file.
 
 ## Install
 
+### Install From Github Source Code
+
 ```
+git clone https://github.com/jackjia-ibm/license-tool
+cd license-tool
 npm install
 npm link
 ```
 
+### Install From npm Registry
+
+This tool is published to [npmjs.com](https://www.npmjs.com/package/license-tool).
+
+```
+npm install -g license-tool
+```
+
+_Please note: you need to make sure your registry is npmjs.com._
+
 ## Configure License Files
 
-Update the files located in `licenses` folder.
+Update the default license files located in `licenses` folder, or you can specify command line options of `--header` and/or `--standaline`.
 
 ## Usage
 
