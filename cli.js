@@ -33,6 +33,10 @@ const argv = yargs
     default: path.join(__dirname, 'licenses/header.txt'),
     description: 'license attached to file header',
   })
+  .option('X', {
+    alias: 'exclude',
+    description: 'exclude extra files/folders pattern',
+  })
   .option('f', {
     alias: 'fix',
     default: false,
@@ -83,7 +87,7 @@ P()
       logger.debug('skipped header license check.');
     }
 
-    await checkHeaderLicense(logger, folder, argv.header, argv.fix);
+    await checkHeaderLicense(logger, folder, argv.header, argv.exclude, argv.fix);
     logger.info('');
   })
   .then(() => {
