@@ -1,6 +1,6 @@
 {
   "name": "license-tool",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A tool to validate license header, or modify license of target file.",
   "main": "index.js",
   "scripts": {
