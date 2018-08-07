@@ -25,12 +25,12 @@ const argv = yargs
   .usage('Usage: $0 [options] <folder|file>')
   .option('L', {
     alias: 'standalone',
-    default: 'licenses/standalone.txt',
+    default: path.join(__dirname, 'licenses/standalone.txt'),
     description: 'license file stays in root folder',
   })
   .option('H', {
     alias: 'header',
-    default: 'licenses/header.txt',
+    default: path.join(__dirname, 'licenses/header.txt'),
     description: 'license attached to file header',
   })
   .option('f', {
@@ -75,7 +75,7 @@ P()
       logger.debug('skipped standalone license check.');
     }
 
-    await checkStandaloneLicense(logger, folder, path.join(__dirname, argv.standalone), argv.fix);
+    await checkStandaloneLicense(logger, folder, argv.standalone, argv.fix);
     logger.info('');
   })
   .then(async() => {
@@ -83,7 +83,7 @@ P()
       logger.debug('skipped header license check.');
     }
 
-    await checkHeaderLicense(logger, folder, path.join(__dirname, argv.header), argv.fix);
+    await checkHeaderLicense(logger, folder, argv.header, argv.fix);
     logger.info('');
   })
   .then(() => {
