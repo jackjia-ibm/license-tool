@@ -8,8 +8,10 @@
 
 const { checkStandaloneLicense } = require('./lib/check-standalone');
 const { checkHeaderLicense } = require('./lib/check-header');
+const Comment = require('./lib/comment');
 
 module.exports = {
   checkStandaloneLicense,
   checkHeaderLicense,
+  Comment,
 };
