@@ -60,7 +60,7 @@ For how to define pattern, you can follow [glob](https://www.npmjs.com/package/g
 ### Check License Verification Result In Your Pipeline
 
 ```groovy
-sh "license-tool . -H /path/to/my/header.txt -L /path/to/my/standalone.txt | grep 'should be fixed'"
+def licenseErrors = sh(script: "license-tool . -H /path/to/my/header.txt -L /path/to/my/standalone.txt | grep 'should be fixed'", returnStdout: true)
 ```
 
 ## Known Issues
