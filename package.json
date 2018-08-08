@@ -1,8 +1,11 @@
 {
   "name": "license-tool",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A tool to validate license header, or modify license of target file.",
-  "keywords": ["license-tool", "license"],
+  "keywords": [
+    "license-tool",
+    "license"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
