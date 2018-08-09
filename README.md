@@ -39,6 +39,7 @@ Options:
   -H, --header      license attached to file header
                                                 [default: "licenses/header.txt"]
   -X, --exclude     exclude extra files/folders pattern
+  -Y, --years       each file license start year
   -f, --fix         if let the tool fixes the license errors
                                                       [boolean] [default: false]
   -v, --verbose     show more processing details      [boolean] [default: false]
@@ -62,6 +63,20 @@ By default, if the folder has `.gitignore`, the tool will pick up and exclude al
 Otherwise, you can specify `-X` or `--exclude` option to define how you want to exclude. You can combine multiple patterns with `;` separated. For example, `-X index.js;node_modules/**/*`.
 
 For how to define pattern, you can follow [glob](https://www.npmjs.com/package/glob).
+
+### My Files Doesn't Have Accurate License Start Year
+
+You can define license start year for each file.
+
+- You can define in the command line by separating each file with comma. For example, `license-tool . -Y path/to/my/file1.js:2010,path/to/my/file2.js:2011`.
+- You can put all definitions in a file. In the file, each file stays in one line, and follow with `:` and year. An example file:
+
+```
+path/to/my/file1.js:2010
+path/to/my/file2.js:2011
+```
+
+Then you can use command `license-tool . -Y /path/to/your/definition/file`.
 
 ### Check License Verification Result In Your Pipeline
 
