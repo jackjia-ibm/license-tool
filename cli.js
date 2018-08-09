@@ -37,6 +37,10 @@ const argv = yargs
     alias: 'exclude',
     description: 'exclude extra files/folders pattern',
   })
+  .option('Y', {
+    alias: 'years',
+    description: 'each file license start year',
+  })
   .option('f', {
     alias: 'fix',
     default: false,
@@ -87,7 +91,10 @@ P()
       logger.debug('skipped header license check.');
     }
 
-    await checkHeaderLicense(logger, folder, argv.header, argv.exclude, argv.fix);
+    await checkHeaderLicense(logger, folder, argv.header, argv.fix, {
+      exclude: argv.exclude,
+      years: argv.years,
+    });
     logger.info('');
   })
   .then(() => {
