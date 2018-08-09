@@ -49,6 +49,12 @@ Options:
 
 Update the default license files located in `licenses` folder, or you can specify command line options of `--header` and/or `--standaline`.
 
+### My License Header Requires Year Range
+
+There is special macro `{year}` you can put in header license file. The macro will be replaced with the correct license year range when parsing that file.
+
+For example, if the file has existing license `Copyright abc company 2016`. Then if current year is 2018, then the `{years}` will be parsed to `2016, 2018`, and expected license will be `Copyright abc company 2016, 2018`.
+
 ### Exclude More Files/Folders
 
 By default, if the folder has `.gitignore`, the tool will pick up and exclude all files/folders defined there.
