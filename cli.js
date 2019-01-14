@@ -34,7 +34,7 @@ const argv = yargs
     description: 'license attached to file header',
   })
   .option('X', {
-    alias: 'exclude',
+    alias: 'excludes',
     description: 'exclude extra files/folders pattern',
   })
   .option('Y', {
@@ -92,7 +92,7 @@ P()
     }
 
     await checkHeaderLicense(logger, folder, argv.header, argv.fix, {
-      exclude: argv.exclude,
+      excludes: argv.excludes,
       years: argv.years,
     });
     logger.info('');
