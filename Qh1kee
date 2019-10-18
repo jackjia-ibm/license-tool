@@ -1,0 +1,31 @@
+
+Problemas de solicitudes de
+extracción
+Mercado
+Explorar
+ 
+@luisalfonso1 
+0 0
+0 01jackjia-ibm / license-tool
+Problemas decódigo1Solicitudes de extracción0AccionesProyectos0WikiSecurityInsights  
+verificación de licencia independiente
+
+ Maestro  v0.0.9 
+...
+ v0.0.1
+@jackjia-ibm
+Jackjia-ibm comprometido el 3 ago 2018
+1 padre 097fd5e commit f4873ea25c82648aa31846fd6e381044531c38db
+Demostración  con 2,644 adiciones y 1 deleción .
+ 12  .editorconfig 
+@@ -0,0 +1,12 @@
+# EditorConfig es increíble: https://EditorConfig.org
+
+# top-most EditorConfig file
+raíz = verdadero
+
+# Líneas nuevas de estilo Unix con una línea nueva que finaliza cada archivo
+[ * ]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
